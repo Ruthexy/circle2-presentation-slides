@@ -101,7 +101,7 @@ Here is another comment.
 
 ---
 
-# Summary Of LMS Month 1 week 3.
+# API Basics - LMS Month 1 Week 3
 
 # Application Programming Interface(API)
 
