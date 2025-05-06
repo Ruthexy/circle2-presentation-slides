@@ -198,3 +198,74 @@ function callbackEx (message, yesFn, noFn) {
 } 
 callbackEx('Do you have a boyfriend', () => console.log('yes'), () => console.log('no'
 ```
+<<<<<<< m1-week2
+<!-- https://sli.dev/guide/animations.html#click-animation -->
+
+---
+
+# Summary of Month 1 Week 2 – Second Semester Class
+
+## Key Points
+- Functions
+- Callbacks
+- Events
+- Event Handlers
+- Promises
+
+---
+
+# Functions
+
+A **function** is a reusable block of code that performs a specific task. You can define it once and call it whenever needed.
+
+```js
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("Ada"); // Output: Hello, Ada!
+```
+
+---
+
+# Closures
+
+A function that returns another function is called a **closure**.
+
+```js
+function add(val1) {
+  return function (val2) {
+    return val1 + val2;
+  };
+}
+
+let addTwoFn = add(2);
+console.log(addTwoFn(15)); // Output: 17
+```
+
+---
+
+# Callbacks
+
+Callbacks are used to execute a function **after** another function finishes. This is especially useful when dealing with asynchronous operations.
+
+For example, 
+
+```js
+const getAverageResult = () => {
+    let result = [2, 3, 4, 5, 6, 7, 8];
+    // using callback function to calculate the average of an array of numbers
+    const callback = (acc, num) => acc + num;
+    let sum = result.reduce(callback, 0);
+    console.log(sum)
+    let average = sum / result.length;
+    alert(average);
+  }
+  getAverageResult()
+```
+
+---
+=======
+---
+transition: fade-out
+---
