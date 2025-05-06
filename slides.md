@@ -106,3 +106,105 @@ Here is another comment.
 
 
 ---
+transition: fade-out
+---
+
+# Month 1 - Week 1
+
+This week started of with an advice to take the 'Learning how to learn course on coursera. <br>
+*Books like:* Refactoring UI, Frontend Developer Handbook and Simplified JavaScript for very important Programmers were listed as materials to help the learning process.
+
+We were re-informed about array methods. Most notably the array.length.
+
+Then:
+```ts {monaco-run}
+let name = 'setemi'
+console.log(name.length);
+// The .length method returns the length of an array. 
+for (let each of name) {
+     console.log(each);
+}
+```
+
+---
+transition: slide-left
+---
+
+# Spread Operators and Rest parameters.
+
+**The spread operator (...) in JavaScript is used to "spread out" elements of an array (or object) into individual elements.**
+
+<div grid="~ cols-2 gap-2" m="t-2">
+
+```yaml
+---
+Say we have an array:
+arr = ['a', 'b', 'c'];
+console.log(arr)
+// ['a', 'b', 'c']
+
+let newArr = [...arr];
+console.log(newArr)
+// ['a', 'b', 'c']
+---
+```
+
+```yaml
+---
+Combining two arrays:
+Let copied = ['a', 'b', 'c']
+console.log(copied)
+// ['a', 'b', 'c']
+
+Let newCopied = [...copied, 'd', 'e', 'f']
+console.log(newCopied)
+// ['a', 'b', 'c', 'd', 'e', 'f']
+---
+```
+
+
+```ts {monaco-run}
+//On an object:
+let obj = {name: 'ojo', age: 12};
+let copied = {...obj};
+console.log(copied)
+```
+
+```ts {monaco-run}
+//It is possible to spread and change the name:
+let obj = {name: 'ojo', age: 12};
+let copied = {...obj, name: 'Ola'};
+console.log(copied)
+```
+
+
+</div>
+
+---
+transition: slide-down
+class: px-20
+---
+
+# Rest
+
+The rest parameter syntax in Javascript allows a function to accept any number of arguments as an array. This is useful when you don't know how many arguments will be passed in, or when you want to simplify handling multiple inputs.
+```ts {monaco-run}
+function example(first, second, ...others) {
+   // logs first and second arguments
+   //alert(first, second)
+   // logs the rest of the arguments as an array
+   //alert(others)
+};
+example(1,2,3,4,5)
+```
+# Callbacks
+```ts
+// Callback functions are functions that are called when certain parameters are met. 
+function callbackEx (message, yesFn, noFn) {
+     let result = confirm(message);
+     if (result) yesFn()
+     else noFn()
+//If the if statement is just 1, no curly braces needed
+} 
+callbackEx('Do you have a boyfriend', () => console.log('yes'), () => console.log('no'
+```
