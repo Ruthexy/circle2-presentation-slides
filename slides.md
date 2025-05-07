@@ -196,7 +196,7 @@ function callbackEx (message, yesFn, noFn) {
      else noFn()
 //If the if statement is just 1, no curly braces needed
 } 
-callbackEx('Do you have a boyfriend', () => console.log('yes'), () => console.log('no'
+callbackEx('Do you have a boyfriend', () => console.log('yes'), () => console.log('no'))
 ```
 <<<<<<< m1-week2
 <!-- https://sli.dev/guide/animations.html#click-animation -->
@@ -263,6 +263,112 @@ const getAverageResult = () => {
   }
   getAverageResult()
 ```
+
+---
+
+## Array Methods That Use Callbacks
+
+- `.reduce()`
+- `.filter()`
+- `.map()`
+- `.forEach()`
+- `.every()`
+- `.some()`
+- `.find()`
+
+---
+
+## Example Using `.reduce()`
+the **callback** of `.reduce()` can take and accept mazimum of four parameters or less.
+
+code example using 2 parameters
+
+```js
+/*
+Function to calculate the average of an array of numbers
+using the reduce method to calculate the sum and divide
+by the array's length.
+*/
+
+const getAverage = () => {
+  let result = [2, 3, 4, 5, 6, 7, 8];
+  let sum = result.reduce((acc, num) => acc + num, 0);
+  let average = sum / result.length;
+  
+  alert(average); // Output: 5
+};
+
+getAverage();
+```
+
+---
+
+# Events and Handlers
+
+An **event** is an action that occurs in the browser (e.g., a button click). An **event handler** is a function that runs in response to an event.
+
+# three ways to create event
+- `addEventListener`
+- `HTML attribute`
+- `DOM`
+
+code example
+
+```js
+document.getElementById("btn").addEventListener("click", function () {
+  alert("Button was clicked!");
+});
+```
+
+---
+
+# Promises
+
+A **promise** is an object that represents the eventual completion (or failure) of an asynchronous operation.
+
+```js
+const fetchData = new Promise((resolve, reject) => {
+  let success = true;
+
+  if (success) {
+    resolve("Data fetched successfully");
+  } else {
+    reject("Failed to fetch data");
+  }
+});
+
+fetchData
+  .then((msg) => console.log(msg))
+  .catch((err) => console.error(err));
+```
+it is stated that if you have a function and you put `async` infront of the function, it becomes a `promise` and you need to `await` that data
+it is also stated that, you can promisify an existing callback
+
+---
+
+# introduced these in promises
+- `new`
+- `return`
+- `.then()`
+- `.catch()`
+- `fetch`
+- `.json`
+- `await`
+- `try`
+- `immediatelyinvoked function Expression(IIFE)`
+
+# fetch
+it says that it is a built in mechanism to communicate to an internal resource
+
+---
+
+# Summary
+
+- Functions can return other functions (closures)
+- Callbacks allow for dynamic behavior
+- Array methods like `.map()`, `.reduce()`, and `.filter()` use callbacks
+- Events and handlers connect user actions to code
+- Promises handle asynchronous tasks cleanly
 
 ---
 =======
