@@ -485,3 +485,81 @@ You can search for elements in the DOM tree using the following methods:
 - matches, closest
 ---
  
+---
+
+# Month 2 - Week 1 
+# Searching The DOM 
+
+An Element with the id 'app' can be assigned to the element variable in two ways; 
+
+``` ts
+const element = document.querySelector('#app')
+
+const element = document.getElementById('app')
+```
+
+We search the DOM using document.querySelector or document.getElementById . 
+The element.innerHTML property allows us to set the HTML content of an element.
+
+# Changing the DOM
+Here, we learnt how to add, remove and update elements in the DOM. We also learnt that Adding HTML Elements, Text, Comments, Attributes, Properties and styles are some of the ways to change the DOM.
+
+
+---  
+
+# Importing CSS in Javascript 
+To do this,
+```ts
+import "./styles.css";
+```
+
+# Adding HTML using innerHTML Property 
+
+```ts
+elements.innerHTML =`
+   <div>
+      Hello There!
+    </div>
+`;    
+```
+# Adding Texts and Elements
+
+After creating the element,  we add it to the DOM using appendChild or insertBefore.
+Other ways to add elements to the DOM is prepend, append, before and after method.
+
+# Removing Elements from the DOM 
+ This is done using the remove method
+
+```
+element.remove();
+```
+
+
+---
+---
+# Update Text
+The textContent property allows us to set the text content of an element
+
+# EVENTS
+These are actions that happen in a browser that you can listen for and respond to. Like, when you press a key, when you load a page, when you submit a form, when you click a button. These are all events.
+
+We listen for events and respond to them with Event Listeners.
+
+To demonstrate how events works in js using a counter:
+
+```ts
+export function setUpCounter(element) {
+  let counter=0;
+
+  const setCounter = (count) => {
+    counter = count;
+    element.innerHTML = `count is ${counter}`;
+  };
+
++    element.addEventListener('click', () => setCounter(counter +1));
+
+    setCounter(0);
+}
+
+```
+
