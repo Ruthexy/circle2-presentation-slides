@@ -561,9 +561,6 @@ export function setUpCounter(element) {
     setCounter(0);
 }
 
-```
-# <div class="text-20xl text-center text-white">second semester summary</div>
-<div class="mt-4 text-2xl text-center text-gray-600">Circle 2 Slides presentation</div>
 
 ---
 # Month 2 Week 2
