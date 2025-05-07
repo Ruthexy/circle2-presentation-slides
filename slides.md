@@ -269,3 +269,219 @@ const getAverageResult = () => {
 ---
 transition: fade-out
 ---
+# API Basics - LMS Month 1 Week 3
+ # Summary Of LMS Month 1 week 3.
+ 
+ # Application Programming Interface(API)
+ 
+ Responsibilities of a frontend engineer
+ There are two basic responsiblities :
+ 
+ - Building of UI(User Interface) which is the primary
+   responsibility
+ - Ensuring the UI is functioning.
+ 
+ # API
+ 
+ What is an API?
+ 
+ API means Application Programming Interface. It is like a messenger that lets two systems talk to each
+ other. It provides a way to sign up and sign in.
+ 
+ # Example:
+ 
+ Practical example to help understand how API work:
+ 
+ When the frontend form submits data to a server
+ (like logging in), it uses an API to send that data to the
+ backend. The API then responds back with the result.
+ 
+ <!--
+ - Month 1 Week 3 cont
+ -->
+ 
+ ---
+ 
+ # Types of API requests:
+ 
+ There are several types of API requests, some are:
+ 
+ POST, GET, PATCH, DELETE......
+ 
+ # GET Request (Fetch or Retrieve Data)
+ 
+ What it does:
+ 
+ A GET request is used to retrieve data from a server. It
+ is a single way to fetch Information from a particular
+ data base.
+ 
+ # Real life example:
+ 
+ Real life example of a get request:
+ 
+ sending a get request to the backend to fetch for user
+ Email, full name...from a form. also,
+ you can fetch the user id from the database.
+ 
+ <!--
+ - Month 1 Week 3 cont
+ -->
+ 
+ ---
+ 
+ # Code example - GET
+ 
+ Let’s say you open a weather app. The app sends a GET request to the API:
+ 
+ you send this:
+ 
+ ```
+ GET https://weatherapi.com/today?city=Lagos
+ ```
+ 
+ The server responds with:
+ 
+ ```json
+ {
+   "city": "Lagos",
+   "temperature": "31°C",
+   "condition": "Sunny"
+ }
+ ```
+ 
+ # GET Request Status codes:
+ 
+ Here are some status codes to note:
+ 
+ - 200 - OK
+ - 201 - Created
+ <!--
+ - Month 1 Week 3 cont
+   -->
+ 
+ ---
+ 
+ - 302 - Redirect
+ - 404 - Not found
+ - 403 - Forbidden
+ - 405 - Method not allowed
+ - 401 - Unauthorized
+ - 500 - Server Error
+ 
+ # POST Request (Send or Submit Data)
+ 
+ What it does:
+ 
+ A POST request is used to send data to the server, like
+ submitting a form. POST is to send out info.
+ 
+ # Real-life example
+ 
+ Below is an example of POST request:
+ 
+ You’re signing up on a site.
+ 
+ <!--
+ - Month 1 Week 3 cont
+   -->
+ 
+ ---
+ 
+ # Code example - POST
+ 
+ Let examine the code below:
+ 
+ The form sends a POST request:
+ 
+ ```
+ POST https://api.example.com/signup
+ ```
+ 
+ with this body:
+ 
+ ```json
+ {
+   "name": "Pelumi",
+   "email": "pelumi@example.com",
+   "password": "12345"
+ }
+ ```
+ 
+ The server responds:
+ 
+ ```json
+ {
+   "message": "Signup successful",
+   "userId": 107
+ }
+ ```
+ 
+ <!--
+ - Month 1 Week 3 conclusion
+   -->
+ 
+ ---
+ 
+ # 🧩 Summary
+ 
+ - APIs connect frontend to backend
+ - Use GET to **fetch**, POST to **send**
+ - Always watch status codes 🔍
+ 
+ <!-- https://sli.dev/guide/animations.html#click-animation -->
+ 
+ ---
+
+ # Summary of month 1 week 4
+This week talked mostly about ECMASCRIPT,DOM and walking the DOM TREE
+
+ECMASCRIPT is the specification that describes JS. It is the formular sheet of Javascript. The host environment is the browser that contains that specification. There is JavaScript the language and JavaScript in the browser. This language specification describes how JavaScript is supposed to function in a browser.
+
+- DOM ( Document Object Method): In simple terms; DOM is like JavaScript is trying to understand our HTML and CSS and it will turn all the HTML into objects. The parent of the object is called DOCUMENT.
+- CSSOM ( CSS Object Model): Is the interface between JavaScript and CSS. It allows JavaScript to interact with the CSS.
+- BOM ( Browser Object Model): is the interface between JavaScript and the browser. It allows JavaScript to interact with the browser. window object is the main object of the BOM. It represents the browser window. It allows web scripting - allowing JavaScript to interact with the browser as a interface to the host computer.
+
+---
+
+# DOM Tree and Walking the DOM
+
+DOM in a nutshell is a tree representation of HTML.
+
+```ts {monaco run}
+console.log(document.documentElement); console.log(document.body); console.log(document.head); console.log(document.title);
+
+HTMLHtmlElement: {}
+HTMLBodyElement: {}
+HTMLHeadElement: {}
+JavaScript Class Note - AltSchool Africa
+```
+
+ The nodes are connected in a tree structure, parent-child relationship, sibling relationship, next-previous relationship, first-last relationship, ancestor-descendant relationship, root-leaf relationship, text-element relationship and in a document type.
+
+
+---
+
+# DOM,BOM AND CSSOM
+```ts
+const element = document.querySelector(`[data-slidev-no="188"]`); // query selector is used to search
+const h1 = element.querySelector('h1'); // if there are a bunch of divs,the query selector here is told to locate only the h1 element
+// any valid selector that you can write in your CSS is what you can pass in your document.queryselector
+console.log(h1.textContent)
+
+h1.classList.add('text-gradient');
+setTimeout(() => h1.classList.remove('text-gradient'), 3000); // return back
+
+---
+# Walking the DOM
+
+You can now traverse the DOM tree using the following based the relationships between the nodes:
+- parentNode, childNodes, firstChild, lastChild, nextSibling, previousSibling
+- parentElement, children, firstElementChild, lastElementChild, nextElementSibling, previousElementSibling
+## Searching: getElement*, querySelector*
+You can search for elements in the DOM tree using the following methods:
+- getElementById, getElementsByClassName, getElementsByTagName, getElementsByName
+- querySelector, querySelectorAll
+- matches, closest
+---
+ 
