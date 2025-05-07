@@ -833,7 +833,8 @@ function checkboxClick(event) {
   document.getElementById("output-box").innerText += warn;
   event.preventDefault();
 }
-```
+---
+
 # Summary Of LMS Month 2 week 4.
 
 
